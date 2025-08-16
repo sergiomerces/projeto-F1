@@ -1,5 +1,5 @@
 {
-  "name": "node-blue-boilerplate",
+  "name": "projeto-f1",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,8 +9,8 @@
     "start:watch": "tsx watch --env-file=.env  src/server.ts",
     "start:dist": "npm run dist && node dist/src/index.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["API minima", "framework", "boilerplate"],
+  "author": "Sérgio Merces",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.11.30",
