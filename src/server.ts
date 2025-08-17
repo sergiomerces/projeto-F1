@@ -6,15 +6,29 @@ import { request } from "http";
 const server = fastify({ logger: true} );
 
 const teams = [
-    { id: 1, name: 'Mc Laren', base: 'Woking, UK' },
-    { id: 2, name: 'Mercedes', base: 'Brackley, UK' },
-    { id: 3, name: 'Redbull Racing', base: 'Milton Keynes, UK' }
+{ id: 1, name: 'McLaren', base: 'Woking, UK' },
+{ id: 2, name: 'Mercedes', base: 'Brackley, UK' },
+{ id: 3, name: 'Red Bull Racing', base: 'Milton Keynes, UK' },
+{ id: 4, name: 'Ferrari', base: 'Maranello, Italy' },
+{ id: 5, name: 'Aston Martin', base: 'Silverstone, UK' },
+{ id: 6, name: 'Alpine', base: 'Enstone, UK' },
+{ id: 7, name: 'Williams', base: 'Grove, UK' },
+{ id: 8, name: 'Sauber', base: 'Hinwil, Switzerland' },
+{ id: 9, name: 'Haas F1 Team', base: 'Kannapolis, USA' },
+{ id: 10, name: 'Racing Bulls', base: 'Faenza, Italy' }
 ];
 
 const drivers = [
-    { id: 1, driver1: 'Lando Norris', driver2: 'Oscar Piastri', team: 'Mc Laren'},
-    { id: 2, driver1: 'Andrea Kimi Antonelli', driver2: 'George Russel', team: 'Mercedes'},
-    { id: 3, driver1: 'Max Verstappen', driver2: 'Liam Lawson', team: 'Redbull Racing'}
+{ id: 1, driver1: 'Lando Norris', driver2: 'Oscar Piastri', team: 'McLaren' },
+{ id: 2, driver1: 'Andrea Kimi Antonelli', driver2: 'George Russell', team: 'Mercedes' },
+{ id: 3, driver1: 'Max Verstappen', driver2: 'Liam Lawson', team: 'Red Bull Racing' },
+{ id: 4, driver1: 'Charles Leclerc', driver2: 'Lewis Hamilton', team: 'Ferrari' },
+{ id: 5, driver1: 'Fernando Alonso', driver2: 'Lance Stroll', team: 'Aston Martin' },
+{ id: 6, driver1: 'Pierre Gasly', driver2: 'Jack Doohan', team: 'Alpine' },
+{ id: 7, driver1: 'Alexander Albon', driver2: 'Carlos Sainz', team: 'Williams' },
+{ id: 8, driver1: 'Nico Hulkenberg', driver2: 'Gabriel Bortoleto', team: 'Sauber' },
+{ id: 9, driver1: 'Esteban Ocon', driver2: 'Oliver Bearman', team: 'Haas F1 Team' },
+{ id: 10, driver1: 'Yuki Tsunoda', driver2: 'Isack Hadjar', team: 'Racing Bulls' }
 ];
 
 //configurar protocolo http e método get
