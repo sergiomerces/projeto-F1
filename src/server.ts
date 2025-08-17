@@ -22,15 +22,33 @@ server.get('/teams', async (request, response) => {
 
     //criando controller
     response.type('application/json').code(200);
-
     return { teams };
 
 });
 
+interface DriverParams {
+    id: string;
+}
+
 server.get('/drivers', async (request, response) => {
     response.type('application.json').code(200);
     return { drivers };
-})
+});
+
+//filtrando pilotos
+server.get<{Params: DriverParams}>('/drivers/:id', async (request, response) => {
+    const id = parseInt(request.params.id);
+    const driver = drivers.find( d => d.id === id);
+
+    if(!driver){
+        response.type('application.json').code(404);
+        return { message: "Driver do not found" };
+    } else {
+        response.type('application.json').code(200);
+        return { driver };
+    }
+}
+);
 
 //criando porta de escuta
 server.listen({ port: 3333 }, () => {
