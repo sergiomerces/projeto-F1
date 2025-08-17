@@ -1,9 +1,16 @@
 //importando pacote e dependencias do framework
 import fastify from "fastify";
+import cors from "@fastify/cors";
 import { request } from "http";
 
 //criando o servidor com log ativo
 const server = fastify({ logger: true} );
+
+//controle de acesso cors
+server.register( cors, { 
+    origin: '*',
+    methods: ['get', 'post']
+});
 
 const teams = [
 { id: 1, name: 'McLaren', base: 'Woking, UK' },
